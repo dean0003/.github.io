@@ -19,7 +19,6 @@
 }
 
 nav {
-    clear: both;
     width: 100%;
     text-align: center;
 }
@@ -53,6 +52,7 @@ aside {
 }
 .content {
     padding:10px;
+    background-image: url("img/moroccan-flower.png");
 }
 h3 {
     font-size: 16pt;
@@ -61,9 +61,26 @@ h3 {
     background-color: #7cc576;
     padding: 15px;
     overflow: auto;
+    position: relative;
 
 }
 
 .pull-right {
     float: right;
+}
+
+.column {
+    display: inline-table;
+    width: 33%;
+    text-align: center;
+}
+
+.pull-left {
+    float: left;
+}
+.v-center {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
