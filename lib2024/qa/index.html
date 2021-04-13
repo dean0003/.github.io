@@ -13,42 +13,68 @@
 		<p>The title tag is used. It looks like this: &lt;title&gt;This is the Title&lt;/title&gt;</p>
 	<h3>4) What tag is used to create a paragraph in html? Give an example.</h3>
 		<p>The &lt;p&gt; tag is used to create a paragraph in html. For example, &lt;p&gt;This is a paragraph. I can write information in here.&lt;/p&gt;</p>
-	<h3>5) Identify the odd one from these tags: <span>, <p>, <a>, <i>  and state the reason?</h3>
+	<h3>5) Identify the odd one from these tags: &lt;span&gt;, &lt;p&gt;, &lt;a&gt;, &lt;i&gt;  and state the reason?</h3>
 		<p> The odd tag is the &lt;p&gt; tag. The &lt;p&gt; tag is a block-level element, whereas the other tags are inline elements.</p>
 	<h3>6) What are the tags required to create a navigation list in HTML?</h3> 
 		<p>The tags required are: &lt;ul&gt; and &lt;li&gt; and &lt;a&gt;</p>
 	<h3>7) What element is used to create images? Name its attributes.</h3>
 		<p>The &lt;img&gt; element is used to create an image. It's attributes are &lt;src&gt; and &lt;alt&gt;</p>
-	<h3>8) Identify the odd one from these tags: <table>, <tr>, <b>, <td>  and state the reason</h3>
+	<h3>8) Identify the odd one from these tags: &lt;table&gt;, &lt;tr&gt;, &lt;b&gt;, &lt;td&gt;  and state the reason</h3>
 		<p>The odd one is &lt;b&gt; It is about making text bold (style), while the other tags are about tables.</p>
 	<h3>9) Give an example of color picker input.</h3> 
 		<p>&lt;input type="color" id="favcolor" name="favcolor" value="#ff0000"&gt;</p>
 	<h3>10) What is the use of name and value attributes? Give two examples</h3> 
-		<p>The &lt;name&gt; attribute specifies the name of an HTML element. For example, the &lt;name&gt; attribute can be applied to &lt;button&gt; &lt;form&gt; and &lt;map&gt;. The &lt;value&gt; attribute specifies the value in elements such as &lt;button&gt; &lt;input&gt; and &lt;li&gt;.</p>
+		<p>The <em>name</em> attribute specifies the name of an HTML element. For example, the <em>name</em> attribute can be applied to &lt;button&gt; &lt;form&gt; and &lt;map&gt;. The <em>value</em> attribute specifies the value in elements such as &lt;button&gt; &lt;input&gt; and &lt;li&gt;.</p>
 	<h3>11) Give an example of inline style.</h3>
 		<p> An example of inline style is &lt;p style="color:green;"&gt; This is a paragraph.&lt;/p&gt;</p>
 	<h3>12) How would you link an external style sheet? Give example.</h3>
 		<p> I would link it in my HTML page by referring to the external style sheet file inside the &lt;link&gt; element, which is inside the &lt;head&gt; section. &lt;link rel="stylesheet" href="mystyle.css"&gt;</p>
-	<h3>13) Create CSS block to center an element both horizontally and vertically that has position:absolute and has width:200px and height:200px.
+	<h3>13) Create CSS block to center an element both horizontally and vertically that has position:absolute and has width:200px and height:200px.</h3>
 		<p> 
+			{
+			  margin: 0px;
+			  width: 200px;
+			  height: 200px;
+			  position: absolute;
+			  top: 50%;
+			  left: 50%;
+			  -ms-transform: translate(-50%, -50%);
+			  transform: translate(-50%, -50%);
+			}
+		</p>
 
-14) Create CSS keyframes block called "spin" that rotates an element. 
+	<h3>14) Create CSS keyframes block called "spin" that rotates an element.</h3>
+		<p> @keyframes spin {
+			from { transform: rotate (0deg); }
+			to { transform: rotate (90deg); }
+		}
+		</p>
 
-15) Create CSS animation block to rotate an element that has the following properties :
+	<h3>15) Create CSS animation block to rotate an element that has the following properties :class "rotate-me"
+	It rotates 5 times at intervals of 0.5s with "linear" transition using animation keyframes "spin"</h3>
+		<p>  @keyframes spin {
+			from { transform: rotate (0deg); }
+			to { transform: rotate (90deg); }
+		}
+		.rotate-me {
+			transition-timing-function: linear;
+			transition-delay: 0.5s;
+			animation-iteration count: 5;
+			animation-name: spin;
+		}
 
-class "rotate-me"
-It rotates 5 times at intervals of 0.5s with "linear" transition using animation keyframes "spin"
-16) How would you include create an alert with string "I love JavaScript" using JavaScript?
+	<h3>16) How would you include create an alert with string "I love JavaScript" using JavaScript?</h3>
+		<p> window.alert("I love JavaScript");</p>
+	<h3>17) How would you fade out an element with id "fade-me" after a delay of 300ms using JQuery?</h3>
+		<p> $("#fade-me").fadeOut("slow", 300);</p>
+	<h3>18) How would you select all elements with class "my-class" using Javascript and Jquery?</h3>
+		<p> Javascript: document.querySelectorAll("my-class");<br /> Jquery: $("my-class");</p>    
+	<h3>19) Give an example of input field that takes phone number with format "123-456-7890"?</h3>
+		<p>  &lt;input type="tel" id="phone" name="phone" placeholder="123-456-6789" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"&gt;</p>
+	<h3>20)  Among HTML, CSS, Javascript, JQuery, what language did you like the best? State the reason.</h3>
+		<p> I liked CSS the best, because it was interesting and challenging to style the web pages.</p>
 
-17) How would you fade out an element with id "fade-me" after a delay of 300ms using JQuery?
-
-18) How would you select all elements with class "my-class" using Javascript and Jquery? 
-
-19) Give an example of input field that takes phone number with format "123-456-7890"?
-
-20)  Among HTML, CSS, Javascript, JQuery, what language did you like the best? State the reason. 
-
-List of Topics and Sub-Modules for QA
+	
 
 
 
