@@ -1,9 +1,225 @@
+body {
+    width: 100%;
+}
+
+.header h1 {
+    padding-left: 50px;
+    padding-right: 50px; 
+}
+
+.header nav {
+    background-color: #72a9ae; 
+    padding-top: 15px; 
+    padding-bottom: 15px;
+    padding-left: 50px;
+    padding-right: 50px;   
+}
+
+.header nav a {
+   text-decoration: none;
+   color: black;
+   padding-right: 30px;
+}
+
+@media screen and (max-width: 600px) {
+    .header h1, .header nav {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+.content {
+    background-image: url("../img/double-bubble-outline.png");
+    padding-left: 50px;
+    padding-right: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
+}
+
+@media screen and (max-width: 600px) {
+    .content {
+        padding-left: 0;
+        padding-right: 0;
+    }
+}
+
+h1, h2 {
+    color: #72a9ae;
+}
+
+.about-img {
+    margin-left: 25px;
+    margin-bottom: 25px;
+}
+
+@media screen and (max-width: 600px) {
+    .about-img {
+        margin-left: 0;
+        margin-bottom: 0;
+        height: 100%;
+    }
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;   
+}
+
+.col-50 {
+    width: 50%;
+}
+
+@media screen and (max-width: 600px) {
+    .pull-right, .pull-left {
+        float:none;
+        width: 100%;
+    }
+}
+
+.clear-fix {
+    clear: both;
+}
+
 table {
     width: 100%;
     border-collapse:collapse  
 }
+
+th {
+    color: #72a9ae;
+    background-color: white; 
+}
+
 th,td {
     border:1pt solid black;
     padding: 5px;
     text-align: center;
 }
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+
+tr:nth-child(odd) {
+    background:none; 
+  } 
+
+  .col-25 {
+    float: left;
+    width: 25%;
+    margin-top: 6px;
+  }
+  
+  .col-75 {
+    float: left;
+    width: 75%;
+    margin-top: 6px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  input[type=submit] {
+    /*float: right;
+    margin-right: 45%;*/
+  }
+
+  .profile {
+      background-color: white;
+      box-shadow: 5px 5px 15px darkgrey;
+      width: 55%;
+      padding: 15px;
+      text-align: center;
+  }
+
+
+  #profile-name {
+    color: #72a9ae;
+}
+  #profile-name, #profile-email, #profile-address {
+      display: block;
+      text-align: center;
+  }
+  
+  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+  @media screen and (max-width: 600px) {
+    .col-25, .col-75, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+      margin-right: 0;
+      clear: both;
+    }
+  }
+
+.footer {
+    background-color: #454545;
+    padding: 10px;
+    overflow: auto;
+    position: relative;
+}
+
+.pull-right {
+    float: right;
+}
+
+.pull-left {
+    float: left;
+}
+
+.v-center {
+    position: absolute;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+}
+
+.col-1, .col-2, .col-3 {
+    width: 33%;
+    color: white;
+    justify-content: center;
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+
+    /*border-width: 1px;
+    border-color: orange;
+    border-style: solid;*/
+}
+
+
+
+.col-1 {
+    float: left;
+}
+
+.col-1 div a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    text-indent: 10px;
+    padding-bottom: 5px;;
+}
+
+.col-2 {
+    text-align: center;
+    float: left;
+}
+
+.col-3 {
+    float: right;
+}
+
+.col-3 p {
+    padding-left: 10px;
+}
+
+
+
+
