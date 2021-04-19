@@ -4,27 +4,58 @@
 <head>
     <title>Final</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="css/fonts.css" media="screen" />
     <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+
 </head>
 
 <body>
 
     <div class="main">
         <div class="header">
-            <h1>MY LOGO</h1>
-            <nav class="clearfix">
-                <a href="#">Home</a>
-                <a href="#">About</a>
-                <a href="#">Schedule</a>
-                <a href="#">Portfolio</a>
-                <a href="#">Contact</a>
-            </nav>
+            <h1 class="logo">MY LOGO</h1>
+            <div class="container-nav">
+                <nav class="clearfix desktop-nav">
+                    <a href="#">Home</a>
+                    <a href="#">About</a>
+                    <a href="#">Schedule</a>
+                    <a href="#">Portfolio</a>
+                    <a href="#">Contact</a>
+                </nav>
+                <div class="ham"></div>
+                <!-- mobile navigation start -->
+                <div class="mobile-nav-container clearfix">
+                    <nav class="main-nav-container mobile-nav">
+                        <ul class="main-nav">
+                            <li>
+                                <a href="#">Home</a>
+                            </li>                            <li>
+                                <a href="#">About</a>
+                            </li>
+                            <li>
+                                <a href="#">Schedule</a>
+                            </li>
+                            <li>
+                                <a href="#">Portfolio</a>
+                            </li>
+                            <li>
+                                <a href="#">Contact</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <!-- mobile navigation end -->
+            </div>
         </div>
+
+
         <div class="content">
             <h2>ABOUT</h2>
             <div>
-                <img class="about-img pull-right" src="img/pexels-lumn-298660.png" width="320" height="213" class="pull-right" />
+                <img class="about-img pull-right" src="img/pexels-lumn-298660.png" width="320" height="213"
+                    alt="picture of plant and books" />
                 <article>
+
                     <p>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam blandit tempor tellus semper
                         consequat. In egestas non justo eget accumsan. Suspendisse sit amet leo magna. Sed mollis in
@@ -92,100 +123,105 @@
             <div class="clear-fix">
                 <div class="pull-left col-50">
                     <h2>EDIT PROFILE</h2>
+                    <form>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="name">Name:</label>
+                            </div>
+                            <div class="col-75">
+                                <input id="name" name="name" type="text" placeholder="Enter your name" required />
+                            </div>
+                        </div>
 
-                    <div class="row">
-                        <div class="col-25">
-                            <label>Name:</label>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="email">Email:</label>
+                            </div>
+                            <div class="col-75">
+                                <input id="email" name="email" type="email" placeholder="youremail@domain.com"
+                                    required />
+                            </div>
                         </div>
-                        <div class="col-75">
-                            <input type="text" placeholder="Enter your name" />
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-25">
-                            <label>Email:</label>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="address">Address:</label>
+                            </div>
+                            <div class="col-75">
+                                <input id="address" name="address" type="text" placeholder="Enter your address"
+                                    required />
+                            </div>
                         </div>
-                        <div class="col-75">
-                            <input type="text" placeholder="youremail@domain.com" />
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-25">
-                            <label>Address:</label>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="city">City:</label>
+                            </div>
+                            <div class="col-75">
+                                <input id="city" name="city" type="text" placeholder="Enter your city" required />
+                            </div>
                         </div>
-                        <div class="col-75">
-                            <input type="text" placeholder="Enter your address" />
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-25">
-                            <label>City:</label>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="province">Province:</label>
+                            </div>
+                            <div class="col-75">
+                                <select id="province" name="province" required>
+                                    <option value="" disabled selected hidden>Choose a province</option>
+                                    <option value="AB">Alberta</option>
+                                    <option value="BC">British Columbia</option>
+                                    <option value="MB">Manitoba</option>
+                                    <option value="NB">New Brunswick</option>
+                                    <option value="NL">Newfoundland and Labrador</option>
+                                    <option value="NS">Nova Scotia</option>
+                                    <option value="ON">Ontario</option>
+                                    <option value="PE">Prince Edward Island</option>
+                                    <option value="QC">Quebec</option>
+                                    <option value="SK">Saskatchewan</option>
+                                    <option value="NT">Northwest Territories</option>
+                                    <option value="NU">Nunavut</option>
+                                    <option value="YT">Yukon</option>
+                                </select>
+                            </div>
                         </div>
-                        <div class="col-75">
-                            <input type="text" placeholder="Enter your city" />
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-25">
-                            <label>Province:</label>
+                        <div class="row">
+                            <div class="col-25">
+                                <label for="postalcode">Postal Code:</label>
+                            </div>
+                            <div class="col-75">
+                                <input id="postalcode" name="postalcode" type="text"
+                                    pattern="[A-Za-z][0-9][A-Za-z] [0-9][A-Za-z][0-9]" placeholder="A1A 1A1" required />
+                            </div>
                         </div>
-                        <div class="col-75">
-                            <select>
-                                <option value="AB">Alberta</option>
-                                <option value="BC">British Columbia</option>
-                                <option value="MB">Manitoba</option>
-                                <option value="NB">New Brunswick</option>
-                                <option value="NL">Newfoundland and Labrador</option>
-                                <option value="NS">Nova Scotia</option>
-                                <option value="ON">Ontario</option>
-                                <option value="PE">Prince Edward Island</option>
-                                <option value="QC">Quebec</option>
-                                <option value="SK">Saskatchewan</option>
-                                <option value="NT">Northwest Territories</option>
-                                <option value="NU">Nunavut</option>
-                                <option value="YT">Yukon</option>
-                            </select>
-                        </div>
-                    </div>
 
-                    <div class="row">
-                        <div class="col-25">
-                            <label>Postal Code:</label>
+                        <div class="row">
+                            <div class="col-25">
+                                &nbsp;
+                            </div>
+                            <div class="col-75">
+                                <input id="submit" type="button" value="SUBMIT" onclick="return false;" />
+                            </div>
                         </div>
-                        <div class="col-75">
-                            <input type="text" placeholder="A1A 1A1" />
-                        </div>
-                    </div>
-
-                    <div class="row">
-                        <div class="col-25">
-
-                        </div>
-                        <div class="col-75">
-                            <input type="submit" value="SUBMIT" />
-                        </div>
-                    </div>
+                    </form>
 
 
                 </div>
                 <div class="pull-right col-50">
                     <h2>PROFILE INFO</h2>
-                    <div class="profile">
-                        <img src="img/profile.png" />
+                    <div id="profile" class="profile">
+                        <img src="img/profile.png" alt="profile picture" />
                         <label id="profile-name">John Doe</label>
                         <label id="profile-email">JohnDoe@algonquincollege.com</label>
-                        <label id="profile-address">1385 Woodroffe Ave, Nepean, ON, K2G 1V8</label>
-                        <img />
+                        <label id="profile-address">1385 Woodroffe Ave<br />Nepean, ON, K2G 1V8</label>
+                        <span class="fa fa-envelope"></span>
                     </div>
                 </div>
             </div>
             <div class="clear-fix"></div>
         </div>
-        
+
         <div class="footer clear-fix">
 
             <div class="col-1">
@@ -201,9 +237,9 @@
             <div class="col-2">
                 <div>
                     <h4>FOLLOW US</h4>
-                    <span class="fa fa-facebook"></span>
-                    <span class="fa fa-youtube"></span>
-                    <span class="fa fa-twitter"></span>
+                    <a href="https://www.facebook.com"><span class="fa fa-facebook"></span></a>
+                    <a href="https://www.youtube.com"><span class="fa fa-youtube"></span></a>
+                    <a href="https://www.twitter.com"><span class="fa fa-twitter"></span></a>
                 </div>
             </div>
 
@@ -219,7 +255,7 @@
             </div>
         </div>
     </div>
-    </div>
+    <script type="text/javascript" src="js/scripts.js"></script>
 </body>
 
 </html>

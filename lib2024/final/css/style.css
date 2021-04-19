@@ -1,10 +1,27 @@
 body {
     width: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.main {
+    max-width: 1200px;
+}
+
+.logo {
+    font-family: 'fingerpaint';
 }
 
 .header h1 {
     padding-left: 50px;
     padding-right: 50px; 
+}
+
+.container-nav {
+    background-color: #72a9ae; 
+}
+
+.desktop-nav {
+    display: none;
 }
 
 .header nav {
@@ -21,11 +38,81 @@ body {
    padding-right: 30px;
 }
 
+.ham {
+    float: right;    
+}
+ 
+.ham {
+        
+        height: 15px;
+        margin:15px;
+        padding-top: 5px;
+        position: relative;
+        float: right;
+        /*this is used to create a pointer for element*/
+        cursor: pointer;
+    }
+ 
+    .ham, .ham:before, .ham:after {
+        width: 30px;
+        border-top: 5px solid black;
+    }
+ 
+    .ham:before {
+        content: "";
+        display:block;
+        position: absolute;
+        background: black;
+    }
+ 
+    .ham:after {
+        content: "";
+        display: block;
+        background: black;
+        position: absolute;
+        bottom: 0;
+    }
+ 
+.mobile-nav {
+    width:100%;
+    clear: both;
+    position: absolute;
+    display: none;
+}
+ 
+.mobile-nav-container {
+    position: relative;
+    clear: both;
+    
+}
+ 
+.mobile-nav li {
+    box-sizing: border-box;
+    width:100%;
+    padding: 10px;
+    background: #72a9ae;
+    border-bottom: 2px solid #121212;
+    list-style: none;
+ 
+}
+
+@media screen and (min-width: 600px) {
+    .ham {
+        display: none;
+    }
+
+    .desktop-nav {
+        display: block;
+    }
+}
+
 @media screen and (max-width: 600px) {
     .header h1, .header nav {
         padding-left: 0;
         padding-right: 0;
     }
+
+        
 }
 
 .content {
@@ -131,17 +218,39 @@ tr:nth-child(odd) {
     margin-right: 45%;*/
   }
 
-  .profile {
+form {
+    padding-right: 10%;
+}
+
+input, select {
+    padding: 5px;
+    width: 100%;  
+    -ms-box-sizing:content-box;
+    -moz-box-sizing:content-box;
+    box-sizing:content-box;
+    -webkit-box-sizing:content-box; 
+
+}
+
+
+  #profile {
       background-color: white;
       box-shadow: 5px 5px 15px darkgrey;
       width: 55%;
       padding: 15px;
       text-align: center;
+      min-width: 320px;
+      opacity: 1;
+      transition: opacity 0.5s;
   }
 
+#profile.fade {
+    opacity: 0;
+}
 
   #profile-name {
     color: #72a9ae;
+    font-weight: bold;
 }
   #profile-name, #profile-email, #profile-address {
       display: block;
@@ -186,7 +295,6 @@ tr:nth-child(odd) {
     justify-content: center;
     overflow: auto;
     display: flex;
-    justify-content: center;
 
     /*border-width: 1px;
     border-color: orange;
@@ -220,6 +328,44 @@ tr:nth-child(odd) {
     padding-left: 10px;
 }
 
+@media screen and (max-width: 600px) {
+    .col-1, .col-2, .col-3 {
+        float:none;
+        width: 100%;
+        justify-content: left;
+        text-align: left;
+    }
+}
 
+.fa-facebook {
+    background-color: #3b5999;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 85px;
+    width: 30px;
+}
 
+.fa-youtube {
+    background-color: #cd201f;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 85px;
+    width: 30px;
+}
 
+.fa-twitter {
+    background-color: #55acee;
+    color: white;
+    font-size: 30px;
+    padding: 10px;
+    border-radius: 85px;
+    width: 30px;
+}
+
+.fa-envelope {
+    color: #71a9aa;
+    font-size: 30px;
+    padding-top: 5px;
+}
